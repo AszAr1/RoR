@@ -1,0 +1,17 @@
+
+<%= form_with model: @user, url: session_path, class: "form" do |form|%>
+  <p class="form-p">Login</p>
+  
+  <div class="form-field">
+    <%= form.email_field :email, placeholder: "Email" %>
+  </div>
+  <div class="form-field">
+    <%= form.password_field :password, placeholder: "Password" %>
+  </div>
+  
+  <div class="form-button">
+    <%= form.submit "Log in" %>
+  </div>
+<% end %>
+
+

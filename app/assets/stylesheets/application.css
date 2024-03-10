@@ -1,15 +1,74 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  font-weight: 700;
+  font-size: 50px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 400px;
+  height: 600px;
+  border: 2px solid gray;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-p {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.form-field {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-field input {
+  padding-left: 10px;
+  width: 300px;
+  height: 40px;
+  border: 1px solild gray;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.form-button {
+  margin-bottom: 30px;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: end;
+  justify-content: center;
+}
+
+.form-button input {
+  position: absolute;
+  background-color: #0673D8;
+  color: white;
+  border: 0px hidden;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+}
