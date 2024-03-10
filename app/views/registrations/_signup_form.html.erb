@@ -1,0 +1,18 @@
+
+<%= form_with model: @user, url: registration_path, class: "form" do |form| %>
+  <p class="form-p">Sign up</p>
+
+  <div class="form-field">
+    <%= form.email_field :email, placeholder: "Email" %>
+  </div>
+  <div class="form-field">
+    <%= form.password_field :password, placeholder: "Password" %>
+  </div>
+  <div class="form-field">
+    <%= form.password_field :password_confirmation, placeholder: "Password confirmation" %>
+  </div>
+
+  <div class="form-button">
+    <%= form.submit "Sign up" %>
+  </div>
+<% end %>

@@ -1,1 +1,14 @@
-<h1>Home page</h1>
+<div class="alert">
+  <%= alert %>
+</div>
+
+<div class="container">
+  <header>Manage your<br/>Events with pleasure</header>
+  <% if user_signed_in? %>
+  <% else %>
+    <div class="form-container">
+      <%= render "sessions/login_form" %>
+      <%= render "registrations/signup_form" %>
+    </div>
+  <% end %>
+</div>

@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
       login user
       redirect_to root_path, notice: "You have been logged in"
     else  
-      flash[:alert] = "Invalid email or password"
-      render :new, status: :unprocessable_entity
+      redirect_to root_path, alert: "Invalid email or password"
     end
 
   end
