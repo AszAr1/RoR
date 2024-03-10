@@ -21,16 +21,16 @@ default: &default
 
 development:
   <<: *default
-  database: to_do_development
+  database: to_do_db
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: to_do
+  username: deopi
 
   # The password associated with the PostgreSQL role (username).
-  #password:
+  password: 123456
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
