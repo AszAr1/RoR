@@ -1,5 +1,5 @@
 
-<%= form_with model: @user, url: registration_path, class: "form" do |form| %>
+<%= form_with model: user, url: registration_path, class: "form" do |form| %>
   <p class="form-p">Sign up</p>
 
   <div class="form-field">
@@ -12,6 +12,13 @@
     <%= form.password_field :password_confirmation, placeholder: "Password confirmation" %>
   </div>
 
+  <% if form.object.errors.any? %>
+    <% form.object.errors.full_messages.each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
   <div class="form-button">
     <%= form.submit "Sign up" %>
   </div>

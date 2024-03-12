@@ -2,9 +2,12 @@
 
 body {
   font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
 }
 
-header {
+
+
+.unsigned-in-header {
   font-weight: 700;
   font-size: 50px;
   align-items: center;
@@ -31,6 +34,21 @@ header {
   align-items: center;
 }
 
+.form select {
+  width: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px
+}
+
+.form textarea {
+  color: black;
+  width: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px
+}
+
 .form-p {
   margin-bottom: 20px;
   text-align: center;
@@ -50,7 +68,7 @@ header {
   height: 40px;
   border: 1px solild gray;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .form-button {
@@ -71,4 +89,155 @@ header {
   font-size: 20px;
   width: 200px;
   height: 50px;
+}
+
+table {
+  width: 100%;
+  counter-reset: tableCount;
+}
+
+table tr {
+  display: flex;
+}
+
+table tr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px; 
+  justify-content: space-between;
+} 
+
+table td {
+  width: 100%;
+  height: 100%
+}
+
+.counterCell:before {              
+  content: counter(tableCount); 
+  counter-increment: tableCount; 
+}
+
+.button {
+  background-color: #0673D8;
+  color: white;
+  border: 0px hidden;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.red-button {
+  background-color: #ff4141;
+  color: white;
+  border: 0px hidden;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+}
+
+.delete-button {
+  border: 1px solid #ff4141;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  color: #ff4141;
+} 
+
+
+
+.edit-delete-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-link a {
+  color: black;
+  transition: color 200ms ease-out 100ms;
+  
+}
+
+.event-link a:hover {
+  color: blue;
+}
+
+.signed-in-header {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 50px;
+  display: flex;
+  background-color: #F8F8F8;
+  width: 90%;
+  border: 1px solid gray;
+  border-radius: 7px; 
+  align-items: center;
+  justify-content: start;
+}
+
+.signed-in-header h3 {
+  color: gray;
+  padding-right: 40px;
+}
+
+.header-button {
+  color: black;
+  text-decoration: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+}
+
+.event {
+  margin-left: 50px;
+  display: flex;
+}
+
+.event h1 {
+  font-size: 40px;
+}
+
+.event p {
+  margin-left: 70px;
+  font-size: 18px;
+}
+
+.date-category {
+  align-items: center;
+  margin-right: 500px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.event-details {
+  width: 50%;
+}
+
+.event-buttons {
+  margin-left: 50px;  
+}
+
+.me {
+  margin-left: 25px;
+}
+
+.disabled {
+  color: white;
+  border: 0px hidden;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  background-color: #73a5d4;
+  cursor: not-allowed;
 }

@@ -1,0 +1,17 @@
+<%= form_with model: @category, url: categories_path, class: "form" do |form| %>
+  <div class="form-field">
+    <%= form.text_field :name, placeholder: "Name" %>
+  </div>
+
+  <% if form.object.errors.any? %>
+    <% form.object.errors.full_messages.each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="form-button">
+    <%= form.submit "Add event" %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<div class="container">
+  <table>
+  <thead>
+      <tr>
+        <td>#</td>
+        <td>Name</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>  
+          <td class="counterCell"></td>
+          <td class="event-link">
+            <%= category.name %>
+          </td>
+          <td>
+            <%= link_to "Delete", "/categories/" + category.id.to_s + "/delete_confirmation", class: "delete-button"%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Add category", new_category_path, class: "button" %> 
+</div>

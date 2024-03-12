@@ -9,10 +9,21 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  
   <body>
- 
-    
+    <div class="alert">
+      <%= alert %>
+    </div>
+    <% if user_signed_in? %>
+      <header class="signed-in-header">
+        <h3>Company</h3>
+        <%= link_to "Me", "/me", class: "header-button" %>
+        <%= link_to "Events", events_path, class: "header-button" %>
+        <%= link_to "Categories", categories_path, class: "header-button" %>
+      </header>
+    <% end %>
+
     <%= yield %>
+
+
   </body>
 </html>

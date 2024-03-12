@@ -1,7 +1,11 @@
 class User < ApplicationRecord
+  has_many :categories
+  
+  has_many :events
+  
   has_secure_password
 
-  validates :email, presence:  true
+  validates :email, presence: true
 
   normalizes :email, with: -> email { email.strip.downcase}
   
