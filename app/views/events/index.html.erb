@@ -1,0 +1,36 @@
+<div class="container">
+  <% if user_signed_in? %>
+    <table>
+    <thead>
+        <tr>
+          <td>#</td>
+          <td>Name</td>
+          <td>Date</td>
+          <td>Catergory</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td class="counterCell"></td>
+          <td class="event-link">
+              <%= link_to event.name, event_path(event) %>
+            </td>
+            <td>
+              <%= event.date %>
+            </td>
+            <td>
+              <%= event.category.name %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to "Add event", new_event_path, class: "button" %> 
+  <% else %>
+    <div class="form-container">
+      <%= render "sessions/login_form" %>
+      <%= render "registrations/signup_form", user: @user %>
+    </div>
+  <% end %>
+</div>

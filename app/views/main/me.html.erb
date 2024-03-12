@@ -1,0 +1,4 @@
+<div class="me">
+  <p>Hello <%= @user.email %></p>
+  <p>You have <%= @user.events.length %> upcoming events (<%=@user.events.select{|event| event.date == Date.today}.length%> today)</p>
+</div>

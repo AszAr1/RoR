@@ -10,9 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_10_125053) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_11_154734) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.date "date"
+    t.string "description"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -21,4 +38,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_10_125053) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "categories", "users"
+  add_foreign_key "events", "categories"
+  add_foreign_key "events", "users"
 end
